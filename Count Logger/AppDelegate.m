@@ -1,5 +1,5 @@
 //
-//  AppDelegate.m
+//  AppDelegate.m --> WORKS
 //  Count Logger
 //
 //  Created by Jonathan Chinen on 30/5/16.
@@ -8,7 +8,10 @@
 
 #import "AppDelegate.h"
 
-@interface AppDelegate ()
+@interface AppDelegate () <PBPebbleCentralDelegate>
+
+@property (weak, nonatomic) PBWatch *connectedWatch;
+@property (weak, nonatomic) PBPebbleCentral *central;
 
 @end
 
@@ -17,8 +20,54 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+	// Set the delegate to receive PebbleKit events
+	self.central = [PBPebbleCentral defaultCentral];
+	self.central.delegate = self;
+	
+	// Register UUID
+	NSUUID *myAppUUID =
+	[[NSUUID alloc] initWithUUIDString:@"7d65d474-925d-4f7b-b0bd-1eb6f435cdc7"];
+	[PBPebbleCentral defaultCentral].appUUID = myAppUUID;
+	
+	// Begin connection
+	[self.central run];
+	NSLog(@"viewDidLoad...");
     return YES;
 }
+
+- (void)pebbleCentral:(PBPebbleCentral*)central watchDidConnect:(PBWatch*)watch isNew:(BOOL)isNew {
+	// Keep a reference to this watch
+	self.connectedWatch = watch;
+	self.connectedWatch.delegate = self;
+	
+	if (self.connectedWatch) {
+		[self launchPebbleApp];
+		NSLog(@"Pebble connected: %@", [watch name]);
+//		self.outputLabel.text = @"CONNECTED!";
+		return;
+	} else {
+//		self.outputLabel.text = @"NOT CONNECTED!";
+		NSLog(@"Failed...");
+	}
+}
+
+- (void)pebbleCentral:(PBPebbleCentral*)central watchDidDisconnect:(PBWatch*)watch {
+	NSLog(@"Pebble disconnected: %@", [watch name]);
+	
+	// If this was the recently connected watch, forget it
+	if ([watch isEqual:self.connectedWatch]) {
+		self.connectedWatch = nil;
+	}
+}
+
+- (void)launchPebbleApp {
+	[self.connectedWatch appMessagesLaunch:^(PBWatch *watch, NSError *error) {
+		if (error) {
+			NSLog(@"Error launching app on Pebble: %@", error);
+		}
+	}];
+}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
