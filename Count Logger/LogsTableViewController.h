@@ -6,8 +6,7 @@
 //  Copyright © 2016 Jonathan Chinen. All rights reserved.
 //
 
-#ifndef LogsTableViewController_h
-#define LogsTableViewController_h
+#import <UIKit/UIKit.h>
+@interface LogsTableViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
 
-
-#endif /* LogsTableViewController_h */
+@end

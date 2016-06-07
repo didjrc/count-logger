@@ -9,10 +9,11 @@
 #import <UIKit/UIKit.h>
 #import <PebbleKit/PebbleKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate, PBPebbleCentralDelegate, PBWatchDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
+@property (strong, nonatomic) PBWatch *connectedWatch;
+@property (weak, nonatomic) PBPebbleCentral *central;
 
 @end
 

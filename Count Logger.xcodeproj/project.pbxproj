@@ -14,6 +14,9 @@
 		4AB62C531CFC237400A35BB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AB62C511CFC237400A35BB8 /* Main.storyboard */; };
 		4AB62C551CFC237400A35BB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AB62C541CFC237400A35BB8 /* Assets.xcassets */; };
 		4AB62C581CFC237400A35BB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AB62C561CFC237400A35BB8 /* LaunchScreen.storyboard */; };
+		9F707D861D06BA79005B0FB0 /* Data.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F707D851D06BA79005B0FB0 /* Data.m */; };
+		9F707D891D06BE3B005B0FB0 /* Eczemama.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F707D881D06BE3B005B0FB0 /* Eczemama.m */; };
+		9F707D8C1D06C1BF005B0FB0 /* LogsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F707D8B1D06C1BF005B0FB0 /* LogsTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,12 @@
 		4AB62C591CFC237400A35BB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4AB62C5F1CFC23BE00A35BB8 /* PodFile */ = {isa = PBXFileReference; lastKnownFileType = text; path = PodFile; sourceTree = "<group>"; };
 		6DBEBD46B3A39833C90FE8CB /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		9F707D851D06BA79005B0FB0 /* Data.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Data.m; sourceTree = "<group>"; };
+		9F707D871D06BA9D005B0FB0 /* Data.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Data.h; sourceTree = "<group>"; };
+		9F707D881D06BE3B005B0FB0 /* Eczemama.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Eczemama.m; sourceTree = "<group>"; };
+		9F707D8A1D06BE4B005B0FB0 /* Eczemama.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Eczemama.h; sourceTree = "<group>"; };
+		9F707D8B1D06C1BF005B0FB0 /* LogsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogsTableViewController.m; sourceTree = "<group>"; };
+		9F707D8D1D06C1D0005B0FB0 /* LogsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LogsTableViewController.h; sourceTree = "<group>"; };
 		E3EFA21E61AD38848761A085 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -71,6 +80,12 @@
 				4AB62C4C1CFC237400A35BB8 /* AppDelegate.m */,
 				4AB62C4E1CFC237400A35BB8 /* ViewController.h */,
 				4AB62C4F1CFC237400A35BB8 /* ViewController.m */,
+				9F707D871D06BA9D005B0FB0 /* Data.h */,
+				9F707D851D06BA79005B0FB0 /* Data.m */,
+				9F707D8A1D06BE4B005B0FB0 /* Eczemama.h */,
+				9F707D881D06BE3B005B0FB0 /* Eczemama.m */,
+				9F707D8D1D06C1D0005B0FB0 /* LogsTableViewController.h */,
+				9F707D8B1D06C1BF005B0FB0 /* LogsTableViewController.m */,
 				4AB62C511CFC237400A35BB8 /* Main.storyboard */,
 				4AB62C541CFC237400A35BB8 /* Assets.xcassets */,
 				4AB62C561CFC237400A35BB8 /* LaunchScreen.storyboard */,
@@ -226,9 +241,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F707D8C1D06C1BF005B0FB0 /* LogsTableViewController.m in Sources */,
 				4AB62C501CFC237400A35BB8 /* ViewController.m in Sources */,
 				4AB62C4D1CFC237400A35BB8 /* AppDelegate.m in Sources */,
 				4AB62C4A1CFC237400A35BB8 /* main.m in Sources */,
+				9F707D891D06BE3B005B0FB0 /* Eczemama.m in Sources */,
+				9F707D861D06BA79005B0FB0 /* Data.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

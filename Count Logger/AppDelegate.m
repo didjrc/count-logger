@@ -8,10 +8,7 @@
 
 #import "AppDelegate.h"
 
-@interface AppDelegate () <PBPebbleCentralDelegate>
-
-@property (weak, nonatomic) PBWatch *connectedWatch;
-@property (weak, nonatomic) PBPebbleCentral *central;
+@interface AppDelegate ()
 
 @end
 
