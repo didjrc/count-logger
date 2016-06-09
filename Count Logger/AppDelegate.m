@@ -22,7 +22,8 @@
 	
 	// Register UUID
 	NSUUID *myAppUUID =
-	[[NSUUID alloc] initWithUUIDString:@"7d65d474-925d-4f7b-b0bd-1eb6f435cdc7"];
+//	[[NSUUID alloc] initWithUUIDString:@"7d65d474-925d-4f7b-b0bd-1eb6f435cdc7"];
+	[[NSUUID alloc] initWithUUIDString:@"5fbb51fe-299d-48ca-bcaf-9c90d8ff9a9d"];
 	[PBPebbleCentral defaultCentral].appUUID = myAppUUID;
 	
 	// Begin connection
