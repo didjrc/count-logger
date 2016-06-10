@@ -11,6 +11,8 @@
 #import "Data.h"
 
 @implementation LogsTableViewController
+//@synthesize textLabel;
+//@synthesize detailTextLabel;
 
 #pragma mark - UIViewController
 
@@ -65,8 +67,7 @@
 	//takes the timestamp property declared in *data and outputs it to the cell.textLabel.text
 	cell.textLabel.text = [dateFormatter stringFromDate:[NSDate dateWithTimeIntervalSince1970:data.timestamp / 1000]];
 	cell.textLabel.textColor = [UIColor whiteColor];
-	
-	//    cell.detailTextLabel.text = [NSString stringWithFormat:@"Packet %u", data.packetId];
+	cell.detailTextLabel.text = [NSString stringWithFormat:@"Packet %u", data.packetId];
 	
 	return cell;
 }

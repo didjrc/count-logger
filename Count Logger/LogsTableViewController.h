@@ -9,4 +9,7 @@
 #import <UIKit/UIKit.h>
 @interface LogsTableViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
 
+//@property (weak, nonatomic) IBOutlet UILabel *textLabel;
+//@property (weak,nonatomic) IBOutlet UILabel *detailTextLabel;
+
 @end
